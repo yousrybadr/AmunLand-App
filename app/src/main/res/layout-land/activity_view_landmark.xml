@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:uber="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_view_landmark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.yousry.amunland.ViewLandmark"
+    android:background="@drawable/app_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@mipmap/ic_profile_default_image"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/signUp_activity_vertical_margin"
+                android:id="@+id/imageView_landmarkPhoto"/>
+            <Button
+                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:text="@string/shareText"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/WhiteColor"
+                android:layout_marginBottom="10dp"
+                android:background="@color/com_facebook_button_background_color"
+                android:id="@+id/shareButton"
+                android:drawableLeft="@drawable/com_facebook_button_icon_white"
+                android:drawableStart="@drawable/com_facebook_button_icon_white"
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/imageView_landmarkPhoto"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shareButton"
+                android:id="@+id/rel1"
+                android:background="@drawable/rounded_bg_relative"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:id="@+id/textView_landmarkDescription"
+                    android:textColor="@color/FontColor2"
+
+                    android:text="Test Test Test Test Test Test Test Test \nTest Test Test Test Test Test\nTestTestTestTest"/>
+
+
+            </RelativeLayout>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imageButtonFr"
+                android:layout_below="@id/rel1"
+                android:layout_toRightOf="@+id/btnTranslate"
+                android:src="@mipmap/icon_fr_language"
+                android:layout_margin="5dp"
+                android:background="@drawable/rounded_bg_relative"
+                android:onClick="onFrButtonClick"
+                />
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imageButtonEn"
+                android:layout_below="@id/rel1"
+                android:layout_toRightOf="@+id/imageButtonFr"
+                android:src="@mipmap/icon_en_language"
+                android:layout_margin="5dp"
+                android:background="@drawable/rounded_bg_relative"
+                android:onClick="onEnButtonClick"
+                />
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/rel1"
+                android:id="@+id/imageButtonAr"
+                android:layout_toRightOf="@+id/imageButtonEn"
+                android:src="@mipmap/icon_ar_language"
+                android:layout_margin="5dp"
+                android:background="@drawable/rounded_bg_relative"
+                android:onClick="onArButtonClick"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnTranslate"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Translate to:"
+                android:layout_below="@id/rel1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/WhiteColor"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rel2"
+                android:layout_below="@+id/btnTranslate"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_bg_relative">
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:id="@+id/horizonatalView"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:background="@color/WhiteColor"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/linear1"
+
+                        >
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel2"
+                android:id="@+id/streetViewButton"
+                android:text="@string/Image_360"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@mipmap/icon_panorama"
+                android:drawableStart="@mipmap/icon_panorama"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:gravity="center"
+                android:background="@drawable/rounded_bg_relative"
+                android:textColor="@color/FontColor2"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/streetViewButton"
+                android:id="@+id/modelViewButton"
+                android:text="@string/show_model_3d"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@mipmap/icon_eye"
+                android:drawableStart="@mipmap/icon_eye"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:gravity="center"
+                android:background="@drawable/rounded_bg_relative"
+                android:textColor="@color/FontColor2"/>
+            <com.uber.sdk.android.rides.RideRequestButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn"
+                android:padding="10dp"
+                android:background="@drawable/rounded_bg_relative"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+
+                android:layout_below="@+id/modelViewButton"
+                uber:ub__style="white" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

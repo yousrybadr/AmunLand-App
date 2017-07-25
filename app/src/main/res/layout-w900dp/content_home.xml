@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/app_bg"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.yousry.amunland.HomeActivity"
+    tools:showIn="@layout/app_bar_home">
+    <android.support.v7.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/LightFontColor2"
+        android:id="@+id/searchView"
+
+        android:layout_margin="5dp">
+
+    </android.support.v7.widget.SearchView>
+
+    <ViewFlipper
+        android:layout_below="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ViewFlipperHome">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:id="@+id/listItems"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+            </ListView>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <ViewFlipper
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ViewFlipperHome2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:clickable="true"
+                        android:onClick="onEventClick"
+                        android:background="@drawable/select_button"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            app:civ_border_color="@color/BackColor"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/imageViewHome"
+                            android:src="@mipmap/ic_logo"
+
+
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:id="@+id/titleTextViewHome"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                            android:text="@string/def"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_below="@+id/imageViewHome"
+                            android:textColor="@color/WhiteColor"
+
+                            />
+
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="40sp"
+                        android:text="Not Found"
+
+                        android:textColor="@color/GoldColor"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:id="@+id/textView2" />
+
+                </RelativeLayout>
+
+
+            </ViewFlipper>
+
+        </LinearLayout>
+
+
+
+    </ViewFlipper>
+
+</RelativeLayout>
